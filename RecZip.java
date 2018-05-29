@@ -16,7 +16,13 @@ public class RecZip {
         File[] fileItems = file.listFiles();
         for(File fileItem : fileItems) {
             if(fileItem.isDirectory()) {
-                reczip(zout, fileItem, absPath + fileItem.getName() + File.separator);
+                // 处理空文件的情况
+                if(fileItem.listFiles().length == 0) {
+                    zout.putNextEntry(new ZipEntry(absPath + fileItem.getName() + File.separator));
+                    zout.closeEntry();
+                } else {
+                    reczip(zout, fileItem, absPath + fileItem.getName() + File.separator);
+                }
             } else {
                 zout.putNextEntry(new ZipEntry(absPath + fileItem.getName()));
                 FileInputStream in = new FileInputStream(fileItem);
