@@ -1,0 +1,13 @@
+set fileencodings=utf-8,gbk
+colorscheme industry
+set cursorline
+set cursorcolumn
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set hlsearch
+set nu
+set laststatus=2
+"set paste
+"set nrformats=
