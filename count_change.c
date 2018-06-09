@@ -53,6 +53,10 @@ int main(int argc, char *argv[])
     int c = count_change(amount, coins_count);
     printf("%d\n", c);
 
+    for(int i = 0; i <= amount; i++)
+        free(counts[i]);
+    free(counts);
+
     return 0;
 }
 /*
