@@ -8,6 +8,10 @@
 * sicp 1.2.2
 * 换零钱方式的统计
 * 记忆递归实现
+* f(0, count) = 1;
+* f(-, count) = 0;
+* f(amount, 0) = 0;
+* f(amount, count) = f(amount, count - 1) + f(amount - coins[count - 1], count)
 */
 
 int coins[5] = {1, 5, 10, 25, 50};
