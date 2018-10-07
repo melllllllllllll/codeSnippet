@@ -91,7 +91,7 @@ public class ReflectionTest {
             String modifiers = Modifier.toString(f.getModifiers());
             if (modifiers.length() > 0)
                 System.out.print(modifiers + " ");
-            System.out.println(type.getName() + ";");
+            System.out.println(type.getName() + " " + name + ";");
         }
     }
 }
